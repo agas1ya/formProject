@@ -1,13 +1,20 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "App" },
+    { name: "description", content: "A fresh starter app" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <main className="pt-16 p-4 container mx-auto">
+      <h1 className="text-2xl font-semibold">Welcome</h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300">
+        This is a clean starter route — remove or replace this content with
+        your own components.
+      </p>
+    </main>
+  );
 }
