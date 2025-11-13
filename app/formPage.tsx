@@ -1,4 +1,4 @@
-import { PersonalDetails } from "~/form";
+import { PersonalDetails } from "~/Components/form";
 import type { Route } from "./routes/+types/home";
 
 export function meta({}: Route.MetaArgs) {
