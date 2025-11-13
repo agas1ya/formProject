@@ -41,8 +41,8 @@ export function FormCard() {
           schema={jsonSchema}
           validator={validator}
           formData={formData}
-          onChange={(e) => setFormData(e.formData ?? {})}
-          onSubmit={(e) => console.log(e.formData)}
+          onChange={(input) => setFormData(input.formData ?? {})}
+          onSubmit={(input) => console.log(input.formData)}
         />
 
       </div>
