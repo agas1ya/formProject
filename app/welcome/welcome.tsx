@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import Form from "@rjsf/core";
 import validator from "@rjsf/validator-ajv8";
 
+const jsonSchema = {
+  type: "object",
+  properties: {
+    name: { type: "string", title: "Name" },
+    age: { type: "number", title: "Age" },
+  },
+};
+
 export function Welcome() {
   const [formData, setFormData] = useState<Record<string, unknown>>({});
 
@@ -15,18 +23,13 @@ export function Welcome() {
 
         <Form
           className="rjsf-form"
-          schema={{
-            type: "object",
-            properties: {
-              name: { type: "string", title: "Name" },
-              age: { type: "number", title: "Age" },
-            },
-          }}
+          schema={jsonSchema}
           validator={validator}
           formData={formData}
           onChange={(e) => setFormData(e.formData ?? {})}
           onSubmit={(e) => console.log(e.formData)}
         />
+
       </div>
     </div>
   );
