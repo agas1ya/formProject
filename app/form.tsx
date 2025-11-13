@@ -10,7 +10,7 @@ const jsonSchema = {
   },
 };
 
-export function Welcome() {
+export function PersonalDetails() {
   const [formData, setFormData] = useState<Record<string, unknown>>({});
 
   return (

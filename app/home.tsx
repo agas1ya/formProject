@@ -1,5 +1,5 @@
-import { Welcome } from "~/welcome/welcome";
-import type { Route } from "./+types/home";
+import { PersonalDetails } from "~/form";
+import type { Route } from "./routes/+types/home";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -11,7 +11,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <main className="pt-16 p-4 container mx-auto">
-      <Welcome /> 
+      <PersonalDetails /> 
     </main>
   );
 }
