@@ -1,5 +1,5 @@
 import { PersonalDetails } from "~/Components/form";
-import type { Route } from "./routes/+types/home";
+import type { Route } from "../../.react-router/types/app/routes/+types/home";
 
 export function meta({}: Route.MetaArgs) {
   return [
