@@ -5,10 +5,25 @@ import validator from "@rjsf/validator-ajv8";
 const jsonSchema = {
   type: "object",
   properties: {
-    name: { type: "string", title: "Name" },
-    age: { type: "number", title: "Age" },
-  },
+    personalInfo: {
+      type: "object",
+      title: "Personal Info",
+      properties: {
+        name: { type: "string", title: "Name" },
+        age: { type: "number", title: "Age" }
+      }
+    },
+    contactInfo: {
+      type: "object",
+      title: "Contact Info",
+      properties: {
+        email: { type: "string", title: "Email" },
+        phone: { type: "string", title: "Phone Number" }
+      }
+    }
+  }
 };
+
 
 export function FormCard() {
   const [formData, setFormData] = useState<Record<string, unknown>>({});
