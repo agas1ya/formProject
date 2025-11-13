@@ -13,3 +13,131 @@ body {
     color-scheme: dark;
   }
 }
+
+/* ===== Welcome component styles ===== */
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+.welcome-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card-bg, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(2,6,23,0.06);
+  padding: 24px;
+  border: 1px solid rgba(2,6,23,0.04);
+  font-family: var(--font-sans);
+  color: var(--text-color, #0f172a);
+}
+
+.welcome-title {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.welcome-desc {
+  margin: 0 0 18px 0;
+  color: rgba(15,23,42,0.65);
+  font-size: 0.95rem;
+}
+
+/* rjsf form tweaks: keep spacing compact and inputs friendly */
+.rjsf-form .form-group {
+  margin-bottom: 14px;
+}
+
+.rjsf-form label.control-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: rgba(2,6,23,0.85);
+  font-size: 0.95rem;
+}
+
+.rjsf-form input[type="text"],
+.rjsf-form input[type="number"],
+.rjsf-form select,
+.rjsf-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(2,6,23,0.08);
+  background: transparent;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+.rjsf-form input[type="number"]::-webkit-outer-spin-button,
+.rjsf-form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.rjsf-form .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.rjsf-form .btn-primary {
+  background: linear-gradient(180deg, #2563eb 0%, #1e40af 100%);
+  color: #fff;
+}
+
+.rjsf-form .btn-secondary {
+  background: transparent;
+  color: rgba(2,6,23,0.8);
+  border: 1px solid rgba(2,6,23,0.06);
+}
+
+/* validation / error visuals */
+.rjsf-form .error-detail,
+.rjsf-form .error {
+  color: #b91c1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  .welcome-card {
+    background: #0b1220;
+    border: 1px solid rgba(255,255,255,0.04);
+    color: #e6eef8;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+  }
+
+  .welcome-desc {
+    color: rgba(230,238,248,0.75);
+  }
+
+  .rjsf-form label.control-label {
+    color: rgba(230,238,248,0.9);
+  }
+
+  .rjsf-form input[type="text"],
+  .rjsf-form input[type="number"],
+  .rjsf-form select,
+  .rjsf-form textarea {
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.02);
+    color: inherit;
+  }
+}
+
+/* small responsive tweak */
+@media (max-width: 440px) {
+  .welcome-card {
+    padding: 18px;
+    border-radius: 10px;
+  }
+}
